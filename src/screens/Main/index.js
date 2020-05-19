@@ -25,10 +25,8 @@ export default function Main() {
       },
     ]);
   };
-  const removeUser = (e) => {
-    users.pop(users.length - 1);
-
-    setUsers([...users]);
+  const removeUser = () => {
+    setUsers(users.filter((el) => el.idUser !== selectedUser.idUser));
   };
   const setCurrentlySelectedUser = (user) => {
     setSelectedUser(user);
